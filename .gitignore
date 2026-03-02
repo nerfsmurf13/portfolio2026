@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Environment
+.env
+.env.*
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Research & planning docs (session artifacts)
+research-*.md
+plan-*.md
+handoff-*.md
+verified-*.md
