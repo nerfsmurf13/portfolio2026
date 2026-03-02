@@ -3,10 +3,8 @@
 
   // -- Nav scroll state --
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
-    lastScroll = window.scrollY;
   }, { passive: true });
 
   // -- Mobile menu --
@@ -50,15 +48,14 @@
 
   reveals.forEach(el => observer.observe(el));
 
-  // -- Hero decorative bars --
+  // -- Hero decorative bars (neumorphic: soft raised lines) --
   const barsContainer = document.getElementById('heroBars');
-  const barCount = 20;
+  const barCount = 8;
   for (let i = 0; i < barCount; i++) {
     const bar = document.createElement('div');
     bar.className = 'bar';
-    const h = Math.random() * 40 + 5;
-    bar.style.height = h + 'px';
-    bar.style.opacity = (Math.random() * 0.5 + 0.2).toFixed(2);
+    const w = Math.random() * 60 + 30;
+    bar.style.width = w + 'px';
     barsContainer.appendChild(bar);
   }
 

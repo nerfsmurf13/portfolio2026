@@ -11,19 +11,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Background effects -->
-<div class="bg-grid"></div>
-<div class="bg-glow bg-glow--cyan"></div>
-<div class="bg-glow bg-glow--red"></div>
-
 <!-- ═══════════════ NAVIGATION ═══════════════ -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav__logo">edward<span>.me</span></a>
+  <a href="#" class="nav__logo">edward<span>.dev</span></a>
   <ul class="nav__links" id="navLinks">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -55,10 +50,10 @@
         prompts, and ship to production with zero downtime.
       </p>
       <div class="hero__proof reveal reveal-delay-3">
-        <span class="proof-badge" aria-label="Approximately 80 percent faster processing"><strong>~80%</strong> Faster Processing</span>
-        <span class="proof-badge" aria-label="Zero parsing failures"><strong>0</strong> Parsing Failures</span>
-        <span class="proof-badge" aria-label="4 AI providers"><strong>4</strong> AI Providers</span>
-        <span class="proof-badge" aria-label="4 live products"><strong>4</strong> Live Products</span>
+        <span class="proof-badge"><strong>~80%</strong> Faster Processing</span>
+        <span class="proof-badge"><strong>0</strong> Parsing Failures</span>
+        <span class="proof-badge"><strong>4</strong> AI Providers</span>
+        <span class="proof-badge"><strong>4</strong> Live Products</span>
       </div>
       <div class="hero__actions reveal reveal-delay-3">
         <a href="#projects" class="btn btn--primary">
@@ -172,15 +167,15 @@
     </div>
 
     <div class="service-grid">
-      <div class="service-card reveal">
+      <div class="service-card service-card--1 reveal">
         <h3 class="service-card__title">SaaS MVPs</h3>
         <p class="service-card__desc">Full-stack web apps from concept to production &mdash; auth, payments, admin, deployment.</p>
       </div>
-      <div class="service-card reveal reveal-delay-1">
+      <div class="service-card service-card--2 reveal reveal-delay-1">
         <h3 class="service-card__title">AI-Powered Features</h3>
         <p class="service-card__desc">Structured AI output, multi-provider orchestration, document analysis pipelines.</p>
       </div>
-      <div class="service-card reveal reveal-delay-2">
+      <div class="service-card service-card--3 reveal reveal-delay-2">
         <h3 class="service-card__title">Production Hardening</h3>
         <p class="service-card__desc">Circuit breakers, rate limiting, schema validation, webhook security, mobile apps.</p>
       </div>
@@ -198,19 +193,19 @@
     </div>
 
     <div class="stats-bar reveal">
-      <div class="stat">
+      <div class="stat stat--blue">
         <div class="stat__number">~80%</div>
         <div class="stat__label">Faster AI Processing</div>
       </div>
-      <div class="stat">
+      <div class="stat stat--coral">
         <div class="stat__number">0</div>
         <div class="stat__label">Parsing Failures</div>
       </div>
-      <div class="stat">
+      <div class="stat stat--yellow">
         <div class="stat__number">4</div>
         <div class="stat__label">AI Providers Orchestrated</div>
       </div>
-      <div class="stat">
+      <div class="stat stat--green">
         <div class="stat__number">4</div>
         <div class="stat__label">Production SaaS Apps</div>
       </div>
@@ -224,9 +219,9 @@
           <h3 class="project__name">Frisco Web Designs</h3>
           <p class="project__tagline">AI-powered web design agency platform &mdash; text-to-website generation with 4 AI providers, CRM, embeddable chatbot builder, and automated client billing.</p>
           <div class="project__badges">
-            <span class="project__badge" aria-label="4 AI providers">4 AI Providers</span>
-            <span class="project__badge" aria-label="28 feature modules">28 Feature Modules</span>
-            <span class="project__badge" aria-label="Zero broken images">0 Broken Images</span>
+            <span class="project__badge">4 AI Providers</span>
+            <span class="project__badge">28 Feature Modules</span>
+            <span class="project__badge">0 Broken Images</span>
           </div>
           <p class="project__role">Solo developer &mdash; designed and built end-to-end</p>
         </div>
@@ -288,9 +283,9 @@
           <h3 class="project__name">Define Your Dollars</h3>
           <p class="project__tagline">Personal finance SaaS with AI-powered bank statement analysis, debt payoff planning, and 6 AI coach personalities. Freemium model with Stripe subscriptions and native mobile apps.</p>
           <div class="project__badges">
-            <span class="project__badge" aria-label="1,000+ users">1K+ Users</span>
-            <span class="project__badge" aria-label="80 percent faster processing">80% Faster Processing</span>
-            <span class="project__badge" aria-label="Zero parsing failures">0 Parsing Failures</span>
+            <span class="project__badge">1K+ Users</span>
+            <span class="project__badge">80% Faster Processing</span>
+            <span class="project__badge">0 Parsing Failures</span>
           </div>
           <p class="project__role">Solo developer &mdash; designed and built end-to-end</p>
         </div>
@@ -351,9 +346,9 @@
           <h3 class="project__name">PropPal</h3>
           <p class="project__tagline">AI-powered aviation maintenance knowledge system &mdash; RAG-based Q&amp;A with CFR 43.3 regulatory compliance, dual-mode AI querying, Pinecone vector search, and module-based purchasing.</p>
           <div class="project__badges">
-            <span class="project__badge" aria-label="3072-dimension vectors">3072-dim Vectors</span>
-            <span class="project__badge" aria-label="Dual-mode AI querying">Dual-Mode AI</span>
-            <span class="project__badge" aria-label="CFR 43.3 compliant">CFR 43.3 Compliant</span>
+            <span class="project__badge">3072-dim Vectors</span>
+            <span class="project__badge">Dual-Mode AI</span>
+            <span class="project__badge">CFR 43.3 Compliant</span>
           </div>
           <p class="project__role">Solo developer &mdash; designed and built end-to-end</p>
         </div>
@@ -413,9 +408,9 @@
           <h3 class="project__name">OriginSmith</h3>
           <p class="project__tagline">Gaming tools platform &mdash; AI-powered Kenshi character/story generator with community quirk submissions, and a Project Zomboid server mod manager with Steam Workshop integration.</p>
           <div class="project__badges">
-            <span class="project__badge" aria-label="5-stage parser">5-Stage Parser</span>
-            <span class="project__badge" aria-label="50 retry validation">50 Retry Validation</span>
-            <span class="project__badge" aria-label="7-day TTL cache">7-Day TTL Cache</span>
+            <span class="project__badge">5-Stage Parser</span>
+            <span class="project__badge">50 Retry Validation</span>
+            <span class="project__badge">7-Day TTL Cache</span>
           </div>
           <p class="project__role">Solo developer &mdash; designed and built end-to-end</p>
         </div>
@@ -518,9 +513,9 @@
       <div class="contact-info reveal">
         <p>
           Open to full-time roles, freelance projects, and interesting collaborations &mdash;
-          especially anything involving <strong style="color:var(--accent-purple)">AI integration</strong>,
-          <strong style="color:var(--accent-cyan)">Vue.js</strong>, or
-          <strong style="color:var(--accent-green)">full-stack SaaS</strong>.
+          especially anything involving <strong class="text-purple">AI integration</strong>,
+          <strong class="text-blue">Vue.js</strong>, or
+          <strong class="text-green">full-stack SaaS</strong>.
         </p>
         <div class="contact-links">
           <a href="mailto:edward.williams91@gmail.com" class="contact-link">
@@ -543,13 +538,15 @@
 
       <div class="contact-terminal reveal">
         <div class="contact-terminal__bar">
-          <div class="contact-terminal__dot contact-terminal__dot--red"></div>
-          <div class="contact-terminal__dot contact-terminal__dot--yellow"></div>
-          <div class="contact-terminal__dot contact-terminal__dot--green"></div>
-          <div class="contact-terminal__title">edward@dallas ~</div>
+          <div class="contact-terminal__title">C:\Users\Edward &mdash; Windows Terminal</div>
+          <div class="contact-terminal__winbtns">
+            <span class="contact-terminal__winbtn">&#8212;</span>
+            <span class="contact-terminal__winbtn">&#9723;</span>
+            <span class="contact-terminal__winbtn contact-terminal__winbtn--close">&#10005;</span>
+          </div>
         </div>
         <div class="contact-terminal__body">
-          <span class="prompt">$</span> <span class="cmd">cat about.txt</span><br>
+          <span class="prompt">C:\Users\Edward&gt;</span> <span class="cmd">type about.txt</span><br>
           <br>
           <span class="output">Name:</span> <span class="accent">Edward Williams</span><br>
           <span class="output">Location:</span> <span class="accent">Dallas, TX</span><br>
@@ -557,10 +554,10 @@
           <span class="output">Focus:</span> <span class="accent">Full-Stack &amp; AI Integration</span><br>
           <span class="output">Stack:</span> <span class="accent">Vue 3 + Node + MongoDB + Claude/GPT/Gemini</span><br>
           <br>
-          <span class="prompt">$</span> <span class="cmd">echo $STATUS</span><br>
+          <span class="prompt">C:\Users\Edward&gt;</span> <span class="cmd">echo %STATUS%</span><br>
           <span class="accent">Building things that work. Shipping to production.</span><br>
           <br>
-          <span class="prompt">$</span> <span class="dim">_</span>
+          <span class="prompt">C:\Users\Edward&gt;</span> <span class="dim">_</span>
         </div>
       </div>
     </div>
