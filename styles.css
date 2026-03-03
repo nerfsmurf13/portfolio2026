@@ -14,7 +14,6 @@
   --ink: #2d3436;
   --text-secondary: #4a5568;
   --text-muted: #718096;
-  --white: #ffffff;
 
   /* Neumorphic Shadows */
   --neu-light: rgba(255, 255, 255, 0.8);
@@ -28,7 +27,6 @@
   /* Accent */
   --accent: #5b7fe9;
   --accent-rgb: 91, 127, 233;
-  --accent-hover: #4a6cd4;
   --accent-glow: 0 4px 20px rgba(91, 127, 233, 0.35);
 
   /* Supporting accents (muted) */
@@ -1018,8 +1016,6 @@ section { padding: 5rem 0; }
   color: var(--text-muted);
 }
 
-.footer a { color: var(--accent); font-weight: 600; }
-.footer a:hover { text-decoration: underline; }
 
 /* ============================================================
    SCROLL REVEAL ANIMATIONS
