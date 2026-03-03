@@ -48,17 +48,6 @@
 
   reveals.forEach(el => observer.observe(el));
 
-  // -- Hero decorative bars (neumorphic: soft raised lines) --
-  const barsContainer = document.getElementById('heroBars');
-  const barCount = 8;
-  for (let i = 0; i < barCount; i++) {
-    const bar = document.createElement('div');
-    bar.className = 'bar';
-    const w = Math.random() * 60 + 30;
-    bar.style.width = w + 'px';
-    barsContainer.appendChild(bar);
-  }
-
   // -- Smooth reveal on load for hero --
   window.addEventListener('load', () => {
     document.querySelectorAll('.hero .reveal').forEach((el, i) => {

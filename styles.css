@@ -404,21 +404,6 @@ section { padding: 5rem 0; }
 .hero__socials svg { width: 20px; height: 20px; fill: currentColor; }
 .hero__socials a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
-/* Hero decoration - soft neumorphic bars */
-.hero__decoration {
-  display: flex;
-  gap: 12px;
-  padding: 1.5rem 0;
-  align-items: center;
-}
-
-.hero__decoration .bar {
-  height: 6px;
-  background: var(--bg);
-  border-radius: 3px;
-  box-shadow: var(--neu-raised-sm);
-}
-
 /* ============================================================
    SKILLS SECTION - neumorphic cards
    ============================================================ */
