@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <!-- Primary Meta -->
 <title>Edward Williams | Full-Stack Developer & AI Engineer | Dallas, TX</title>
@@ -49,6 +50,7 @@
       "url": "https://edwardwilliams.me/",
       "name": "Edward Williams",
       "description": "Portfolio of Edward Williams, a full-stack developer and AI engineer based in Dallas, Texas.",
+      "inLanguage": "en-US",
       "publisher": { "@id": "https://edwardwilliams.me/#person" }
     },
     {
@@ -59,11 +61,13 @@
       "isPartOf": { "@id": "https://edwardwilliams.me/#website" },
       "mainEntity": { "@id": "https://edwardwilliams.me/#person" },
       "datePublished": "2024-01-01",
-      "dateModified": "2026-03-03"
+      "dateModified": "2026-03-28"
     },
     {
       "@type": "Person",
       "@id": "https://edwardwilliams.me/#person",
+      "mainEntityOfPage": { "@id": "https://edwardwilliams.me/#profilepage" },
+      "image": "https://edwardwilliams.me/img/ogimage.png",
       "name": "Edward Williams",
       "givenName": "Edward",
       "familyName": "Williams",
@@ -172,6 +176,73 @@
         "@type": "Answer",
         "text": "Edward Williams is based in Dallas, Texas. Originally from Houston, TX, he is open to full-time roles, freelance projects, and collaborations, especially involving AI integration, Vue.js, or full-stack SaaS development. He can be reached at edward.williams91@gmail.com."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Edward Williams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach Edward Williams via email at edward.williams91@gmail.com, on GitHub at github.com/nerfsmurf13, or on LinkedIn at linkedin.com/in/edwardalexanderwilliams."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ItemList Schema for Projects -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Flagship Projects by Edward Williams",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Frisco Web Designs",
+        "applicationCategory": "WebApplication",
+        "description": "AI-powered web design agency platform with text-to-website generation using 4 AI providers, CRM, embeddable chatbot builder, and automated client billing.",
+        "url": "https://friscowebdesigns.com",
+        "author": { "@id": "https://edwardwilliams.me/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Define Your Dollars",
+        "applicationCategory": "FinanceApplication",
+        "description": "Personal finance SaaS with AI-powered bank statement analysis, debt payoff planning, and 6 AI coach personalities. 1K+ users with Stripe subscriptions and native mobile apps.",
+        "url": "https://defineyourdollars.com",
+        "author": { "@id": "https://edwardwilliams.me/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "PropPal",
+        "applicationCategory": "BusinessApplication",
+        "description": "AI-powered aviation maintenance knowledge system with RAG-based Q&A, CFR 43.3 regulatory compliance, dual-mode AI querying, and Pinecone vector search.",
+        "url": "https://useproppal.com",
+        "author": { "@id": "https://edwardwilliams.me/#person" }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "OriginSmith",
+        "applicationCategory": "GameApplication",
+        "description": "Gaming tools platform with AI-powered Kenshi character and story generator, community quirk submissions, and Project Zomboid server mod manager with Steam Workshop integration.",
+        "url": "https://originsmith.netlify.app",
+        "author": { "@id": "https://edwardwilliams.me/#person" }
+      }
     }
   ]
 }
@@ -181,22 +252,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Prevent flash of wrong theme
+  (function() {
+    var s = localStorage.getItem('theme');
+    if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark-theme');
+    }
+  })();
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ═══════════════ NAVIGATION ═══════════════ -->
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Primary">
   <a href="#" class="nav__logo">edward<span>williams.me</span></a>
   <ul class="nav__links" id="navLinks">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav__actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg aria-hidden="true" focusable="false" class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg aria-hidden="true" focusable="false" class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
+<main id="main">
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" id="hero">
   <div class="container">
@@ -230,27 +318,27 @@
       </div>
       <div class="hero__actions reveal reveal-delay-3">
         <a href="#projects" class="btn btn--primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
           View Projects
         </a>
-        <a href="#" class="btn btn--ghost">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <a href="/Resume_Edward_Williams.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           Resume
         </a>
         <a href="#contact" class="btn btn--ghost">Get in Touch</a>
       </div>
       <div class="hero__socials reveal reveal-delay-4">
         <a href="https://github.com/nerfsmurf13" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/edwardalexanderwilliams/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
         <a href="https://www.youtube.com/channel/UChCmp3gZe35BSTEHcJRDHog" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
         <a href="https://twitter.com/JustEdWilliams" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
       </div>
     </div>
@@ -271,7 +359,7 @@
       <div class="skill-card skill-card--frontend reveal">
         <div class="skill-card__header">
           <div class="skill-card__icon">&#9672;</div>
-          <div class="skill-card__title">Full-Stack Vue + Node</div>
+          <h3 class="skill-card__title">Full-Stack Vue + Node</h3>
         </div>
         <p class="skill-card__narrative">Production SPAs with reactive state management, RESTful APIs, real-time Socket.IO, and MongoDB data layers.</p>
         <div class="skill-card__tags">
@@ -285,7 +373,7 @@
       <div class="skill-card skill-card--ai reveal">
         <div class="skill-card__header">
           <div class="skill-card__icon">&#9733;</div>
-          <div class="skill-card__title">AI Orchestration</div>
+          <h3 class="skill-card__title">AI Orchestration</h3>
         </div>
         <p class="skill-card__narrative">Multi-provider systems with structured output validation, circuit breakers, prompt caching, and graceful fallbacks.</p>
         <div class="skill-card__tags">
@@ -299,7 +387,7 @@
       <div class="skill-card skill-card--payments reveal">
         <div class="skill-card__header">
           <div class="skill-card__icon">&#36;</div>
-          <div class="skill-card__title">Payments &amp; Auth</div>
+          <h3 class="skill-card__title">Payments &amp; Auth</h3>
         </div>
         <p class="skill-card__narrative">Stripe subscriptions with full webhook lifecycle, JWT + OAuth + magic links, tier-gated access control.</p>
         <div class="skill-card__tags">
@@ -313,7 +401,7 @@
       <div class="skill-card skill-card--saas reveal">
         <div class="skill-card__header">
           <div class="skill-card__icon">&#8635;</div>
-          <div class="skill-card__title">SaaS Architecture</div>
+          <h3 class="skill-card__title">SaaS Architecture</h3>
         </div>
         <p class="skill-card__narrative">End-to-end product engineering &mdash; CRM, admin dashboards, background workers, rate limiting, and native mobile apps.</p>
         <div class="skill-card__tags">
@@ -398,7 +486,7 @@
         <div class="project__header-side">
           <div class="project__links">
             <a href="https://friscowebdesigns.com" target="_blank" rel="noopener noreferrer" class="project__link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Live
             </a>
           </div>
@@ -436,9 +524,9 @@
           <div>
             <h4 class="project__col-title">Engineering Highlights</h4>
             <ul class="highlight-list">
-              <li><strong>Circuit Breaker pattern</strong>Per-provider OPEN&rarr;HALF_OPEN&rarr;CLOSED state machine prevents cascade failures</li>
-              <li><strong>Zero broken images</strong>3-tier fallback: memory cache &rarr; MongoDB &rarr; Unsplash API &rarr; deterministic seeds</li>
-              <li><strong>Structured AI via Zod</strong>All LLM output validated with z.union() and safeParseOrDefault() for graceful degradation</li>
+              <li><strong>Circuit Breaker pattern</strong> — Per-provider OPEN&rarr;HALF_OPEN&rarr;CLOSED state machine prevents cascade failures</li>
+              <li><strong>Zero broken images</strong> — 3-tier fallback: memory cache &rarr; MongoDB &rarr; Unsplash API &rarr; deterministic seeds</li>
+              <li><strong>Structured AI via Zod</strong> — All LLM output validated with z.union() and safeParseOrDefault() for graceful degradation</li>
             </ul>
           </div>
         </div>
@@ -462,7 +550,7 @@
         <div class="project__header-side">
           <div class="project__links">
             <a href="https://defineyourdollars.com" target="_blank" rel="noopener noreferrer" class="project__link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Live
             </a>
           </div>
@@ -499,9 +587,9 @@
           <div>
             <h4 class="project__col-title">Engineering Highlights</h4>
             <ul class="highlight-list">
-              <li><strong>Reduced AI costs ~80%</strong>Hybrid pipeline sends first 100 rows to Claude, then pattern-matches the rest locally</li>
-              <li><strong>0% parsing failures in production</strong>Strict Zod schemas on Claude tool_use output eliminate hallucination errors</li>
-              <li><strong>5-stage aggregation pipeline</strong>Normalize &rarr; detect transfers &rarr; deduplicate &rarr; merge recurring &rarr; extract entities</li>
+              <li><strong>Reduced AI costs ~80%</strong> — Hybrid pipeline sends first 100 rows to Claude, then pattern-matches the rest locally</li>
+              <li><strong>0% parsing failures in production</strong> — Strict Zod schemas on Claude tool_use output eliminate hallucination errors</li>
+              <li><strong>5-stage aggregation pipeline</strong> — Normalize &rarr; detect transfers &rarr; deduplicate &rarr; merge recurring &rarr; extract entities</li>
             </ul>
           </div>
         </div>
@@ -525,7 +613,7 @@
         <div class="project__header-side">
           <div class="project__links">
             <a href="https://useproppal.com" target="_blank" rel="noopener noreferrer" class="project__link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Live
             </a>
           </div>
@@ -561,9 +649,9 @@
           <div>
             <h4 class="project__col-title">Engineering Highlights</h4>
             <ul class="highlight-list">
-              <li><strong>Ports &amp; Adapters AI architecture</strong>Swappable OpenAI and Gemini adapters behind a common interface with graceful degradation</li>
-              <li><strong>Vector search with Pinecone</strong>3072-dimension embeddings, namespace-per-manual, metadata filtering, and BM25 fallback</li>
-              <li><strong>Safety-first answer generation</strong>Citation validation, confidence thresholds, warning preservation, and CFR 43.3 compliance checks</li>
+              <li><strong>Ports &amp; Adapters AI architecture</strong> — Swappable OpenAI and Gemini adapters behind a common interface with graceful degradation</li>
+              <li><strong>Vector search with Pinecone</strong> — 3072-dimension embeddings, namespace-per-manual, metadata filtering, and BM25 fallback</li>
+              <li><strong>Safety-first answer generation</strong> — Citation validation, confidence thresholds, warning preservation, and CFR 43.3 compliance checks</li>
             </ul>
           </div>
         </div>
@@ -587,7 +675,7 @@
         <div class="project__header-side">
           <div class="project__links">
             <a href="https://originsmith.netlify.app" target="_blank" rel="noopener noreferrer" class="project__link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Live
             </a>
           </div>
@@ -621,9 +709,9 @@
           <div>
             <h4 class="project__col-title">Engineering Highlights</h4>
             <ul class="highlight-list">
-              <li><strong>Compatibility validation engine</strong>50 retry attempts to find valid race/faction/weapon/quirk combinations</li>
-              <li><strong>Throttled Steam API</strong>p-queue with 1 concurrency + 200ms interval, batches of 100, Cheerio scrape fallback</li>
-              <li><strong>Themed rate limiting</strong>6 tiers with game-flavored error messages ("The scribe needs a moment to rest")</li>
+              <li><strong>Compatibility validation engine</strong> — 50 retry attempts to find valid race/faction/weapon/quirk combinations</li>
+              <li><strong>Throttled Steam API</strong> — p-queue with 1 concurrency + 200ms interval, batches of 100, Cheerio scrape fallback</li>
+              <li><strong>Themed rate limiting</strong> — 6 tiers with game-flavored error messages ("The scribe needs a moment to rest")</li>
             </ul>
           </div>
         </div>
@@ -648,13 +736,13 @@
           <div class="archived-card__desc">Original character generator &mdash; simple randomizer without AI stories.</div>
           <div class="archived-card__tech">HTML &middot; CSS &middot; Vanilla JS</div>
         </a>
-        <a href="http://spacexdb.com/" target="_blank" rel="noopener noreferrer" class="archived-card">
+        <a href="https://spacexdb.com/" target="_blank" rel="noopener noreferrer" class="archived-card">
           <div class="archived-card__badge">Outdated API</div>
           <div class="archived-card__name">SpaceX API Demo</div>
           <div class="archived-card__desc">Multipage site with Tesla-inspired UI pulling SpaceX launch data.</div>
           <div class="archived-card__tech">Vue.js</div>
         </a>
-        <a href="http://costofduty.com/" target="_blank" rel="noopener noreferrer" class="archived-card">
+        <a href="https://costofduty.com/" target="_blank" rel="noopener noreferrer" class="archived-card">
           <div class="archived-card__badge">API Deprecated</div>
           <div class="archived-card__name">Cost of Duty</div>
           <div class="archived-card__desc">Call of Duty player stats &mdash; calculates time/resource usage value.</div>
@@ -689,24 +777,24 @@
         </p>
         <div class="contact-links">
           <a href="mailto:edward.williams91@gmail.com" class="contact-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             edward.williams91@gmail.com
             <span>Email</span>
           </a>
           <a href="https://github.com/nerfsmurf13" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
             github.com/nerfsmurf13
             <span>GitHub</span>
           </a>
           <a href="https://www.linkedin.com/in/edwardalexanderwilliams/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
             <span>Profile</span>
           </a>
         </div>
       </div>
 
-      <div class="contact-terminal reveal">
+      <div class="contact-terminal reveal" aria-hidden="true">
         <div class="contact-terminal__bar">
           <div class="contact-terminal__title">C:\Users\Edward &mdash; Windows Terminal</div>
           <div class="contact-terminal__winbtns">
@@ -780,6 +868,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="footer">

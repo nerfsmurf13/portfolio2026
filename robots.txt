@@ -44,6 +44,21 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Amazon AI
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
 # Default - allow all
 User-agent: *
 Allow: /
