@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8ecf2"/>
+      <stop offset="100%" stop-color="#d5dbe3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b7fe9"/>
+      <stop offset="100%" stop-color="#9b7fe9"/>
+    </linearGradient>
+    <filter id="neu">
+      <feDropShadow dx="-2" dy="-2" stdDeviation="2" flood-color="#fff" flood-opacity="0.7"/>
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#a3b1c6" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" filter="url(#neu)"/>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="url(#accent)" opacity="0.08"/>
+  <text x="32" y="44" text-anchor="middle" font-family="'Outfit','Segoe UI',system-ui,sans-serif" font-weight="900" font-size="30" letter-spacing="-2" fill="url(#accent)">EW</text>
+  <rect x="10" y="50" width="18" height="3" rx="1.5" fill="url(#accent)" opacity="0.6"/>
+</svg>
