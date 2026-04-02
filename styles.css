@@ -742,7 +742,7 @@ section { padding: 5rem 0; }
   letter-spacing: 0.15em;
 }
 
-.project__preview img { width: 100%; display: block; }
+.project__preview img { width: 100%; height: auto; display: block; }
 
 /* Project body */
 .project__body { padding: 1.75rem 2rem 2rem; }
